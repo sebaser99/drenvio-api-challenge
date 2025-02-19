@@ -2,7 +2,7 @@
 
 ## 📌 Descripción
 
-Este proyecto es una API desarrollada con Node.js y TypeScript, siguiendo buenas prácticas de desarrollo, arquitectura hexagonal y tipado estático para mayor seguridad y mantenibilidad. 
+Este proyecto es una API desarrollada con Node.js, Express y TypeScript, siguiendo buenas prácticas de desarrollo, arquitectura hexagonal y tipado estático para mayor seguridad y mantenibilidad. La API trae los productos que serán renderizados en el fronted y permite actualizarlos, editarlos y crearlos.
 
 ## 🚀¿Por qué TypeScript?
 
