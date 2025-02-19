@@ -1,22 +1,14 @@
-Proyecto API Node.js con TypeScript
+#API Dr Envios
 
-Descripción
+## 📌 Descripción
 
-Este proyecto es una API desarrollada con Node.js y TypeScript, siguiendo buenas prácticas de desarrollo, arquitectura modular y tipado estático para mayor seguridad y mantenibilidad.
+Este proyecto es una API desarrollada con Node.js y TypeScript, siguiendo buenas prácticas de desarrollo, arquitectura hexagonal y tipado estático para mayor seguridad y mantenibilidad. 
 
-¿Por qué TypeScript?
+## 🚀¿Por qué TypeScript?
 
-TypeScript ofrece múltiples ventajas sobre JavaScript para el desarrollo de APIs, entre ellas:
+Escogí Typescript porque es javascript con super poderes debido a su tipado estricto, lo cual me permite mantener una estrcutura uniforme, escalar la aplicación a futuro y depurar errores en tiempo de ejecución. Como manejamos una arquitecutra hexagonal y nos enfocamos en la modularida, typescript es el lenguaje aporpiado para lograrlo.
 
-Tipado estático: Reduce errores en tiempo de ejecución y facilita el mantenimiento.
-
-Autocompletado y mejor experiencia de desarrollo: Gracias a su integración con editores como VSCode.
-
-Mayor escalabilidad: Facilita la refactorización y modularización del código.
-
-Compatibilidad con JavaScript: Se puede integrar en proyectos existentes sin problemas.
-
-Tecnologías utilizadas
+## 🛠 Tecnologías utilizadas
 
 Node.js - Entorno de ejecución para JavaScript en el servidor.
 
@@ -69,20 +61,20 @@ Scripts disponibles
   "test": "jest"
 }
 
-Uso de la API
+---
 
-Endpoints principales
-
-1. Obtener todos los productos
-
+## 📡 Uso de la API
+### 🔗 Endpoints principales
+#### 1️⃣ Obtener todos los productos
+```http
 GET /api/productos
-
-2. Obtener un producto por ID
-
+```
+#### 2️⃣ Obtener un producto por ID
+```http
 GET /api/productos/:id
-
-3. Crear un nuevo producto
-
+```
+#### 3️⃣ Crear un nuevo producto
+```http
 POST /api/productos
 Content-Type: application/json
 {
@@ -90,29 +82,8 @@ Content-Type: application/json
   "precio": 15000,
   "stock": 10
 }
+```
 
-Pruebas
-
-Ejecutar pruebas unitarias:
-
-npm run test
-
-Despliegue con Docker
-
-# Construir la imagen
-docker build -t api-node-ts .
-
-# Ejecutar el contenedor
-docker run -p 3000:3000 api-node-ts
-
-Contribuciones
-
-Hacer un fork del repositorio.
-
-Crear una rama con la nueva funcionalidad.
-
-Hacer un pull request.
-
-Licencia
+##Licencia
 
 Este proyecto está bajo la licencia MIT.
