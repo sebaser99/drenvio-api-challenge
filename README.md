@@ -2,7 +2,7 @@
 
 ## 📌 Descripción
 
-Este proyecto es una API desarrollada con Node.js, Express y TypeScript, siguiendo buenas prácticas de desarrollo, arquitectura hexagonal y tipado estático para mayor seguridad y mantenibilidad. La API trae los productos que serán renderizados en el fronted y permite actualizarlos, editarlos y crearlos.
+Este proyecto es una API desarrollada con Node.js, Express y TypeScript, siguiendo buenas prácticas de desarrollo, arquitectura hexagonal y tipado estático para mayor seguridad y mantenibilidad. La API trae los productos que serán renderizados en el fronted y también permite agregarlos a una colección de precios especiales y consultarlos para afectar el valor inicial de los productos.
 
 ## 🚀¿Por qué TypeScript?
 
@@ -16,13 +16,10 @@ TypeScript - Superset tipado de JavaScript.
 
 Express.js - Framework para crear APIs REST.
 
-MongoDB / PostgreSQL - Base de datos (según configuración del proyecto).
+MongoDB / Proporcionada por Dr Envíos.
 
-Sequelize / Mongoose - ORM/ODM para manejar la base de datos.
+Mongoose - ORM/ODM para manejar la base de datos.
 
-Jest / Mocha - Pruebas unitarias.
-
-Docker - Contenerización para despliegue eficiente.
 
 Instalación
 
@@ -32,7 +29,7 @@ Node.js (versión 18 o superior)
 
 npm o yarn
 
-Base de datos configurada (MongoDB o PostgreSQL según el caso)
+Base de datos configurada - MongoDB 
 
 Pasos para la instalación
 
