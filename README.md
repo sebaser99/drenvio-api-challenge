@@ -34,23 +34,23 @@ Base de datos configurada - MongoDB
 
 ## Pasos para la instalación
 
-# Clonar el repositorio
+### Clonar el repositorio
 git clone https://github.com/usuario/proyecto-api-node.git
 cd proyecto-api-node
 
-# Instalar dependencias
+### Instalar dependencias
 npm install
 
-# Configurar variables de entorno
+### Configurar variables de entorno
 ver env.example
 
-# Compilar TypeScript
+### Compilar TypeScript
 npm run build
 
-# Iniciar el servidor en desarrollo
+### Iniciar el servidor en desarrollo
 npm run dev 
 
-# Iniciar el servidor en producción
+### Iniciar el servidor en producción
 npm run start
 
 Scripts disponibles
