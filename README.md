@@ -41,21 +41,24 @@ cd proyecto-api-node
 npm install
 
 # Configurar variables de entorno
-cp .env.example .env
+ver env.example
 
 # Compilar TypeScript
-tsc
+npm run build
 
 # Iniciar el servidor en desarrollo
-npm run dev
+npm run dev 
+
+# Iniciar el servidor en producción
+npm run start
 
 Scripts disponibles
 
 "scripts": {
-  "dev": "ts-node-dev --respawn src/index.ts",
+  start:dev": "cross-env NODE_ENV=development npx nodemon",
   "build": "tsc",
-  "start": "node dist/index.js",
-  "test": "jest"
+  "start": "cross-env NODE_ENV=production node dist/index.js",
+  "test": "echo \"Error: no test specified\" && exit 1"
 }
 
 ---
@@ -64,23 +67,25 @@ Scripts disponibles
 ### 🔗 Endpoints principales
 #### 1️⃣ Obtener todos los productos
 ```http
-GET /api/productos
+GET /productos
 ```
-#### 2️⃣ Obtener un producto por ID
+#### 2️⃣ Obtener todos los precios especiales
 ```http
-GET /api/productos/:id
+GET /specialPrices
 ```
-#### 3️⃣ Crear un nuevo producto
+#### 3️⃣ Crear un precio especial
 ```http
-POST /api/productos
+POST /specialPrices
 Content-Type: application/json
 {
-  "nombre": "Tractor John Deere",
-  "precio": 15000,
-  "stock": 10
+  "document": "34569885",
+  "name": "Gabriela Guzman" 
+  "productId": "6750ef7cfce1f2f80959a98b",
 }
 ```
+#### 4️⃣ Obtener todos los precios especiales por documento 
+```http
+GET /specialPrices/user/:id
+```
 
-##Licencia
 
-Este proyecto está bajo la licencia MIT.
