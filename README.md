@@ -21,7 +21,7 @@ MongoDB / Proporcionada por Dr Envíos.
 Mongoose - ORM/ODM para manejar la base de datos.
 
 
-Instalación
+## 🔧 Instalación y ejecución
 
 Requisitos previos
 
@@ -31,7 +31,8 @@ npm o yarn
 
 Base de datos configurada - MongoDB 
 
-Pasos para la instalación
+
+## Pasos para la instalación
 
 # Clonar el repositorio
 git clone https://github.com/usuario/proyecto-api-node.git
