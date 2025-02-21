@@ -15,6 +15,12 @@ class Utils {
             }
         };
     }
+
+    isEmpty(value: string | undefined) : boolean {
+        return value == undefined || value == null || value == ''
+            ? true
+            : false;
+    }
 }
 
 const utils = new Utils();

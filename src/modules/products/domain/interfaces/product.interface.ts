@@ -1,15 +1,15 @@
-  export class Product {
-    constructor(
-      public readonly id: string,
-      public name: string,
-      public price: number,
-      public category: string,
-      public stock: number,
-      public description: string,
-      public brand: string,
-      public sku: string,
-      public tags: string[],
-      public createdAt: Date,
-      public updatedAt: Date
-    ) {}
+import { Document } from "mongoose";
+
+  export interface Product extends Document {
+    id: string,
+    name: string,
+    price: number,
+    category: string,
+    stock: number,
+    description: string,
+    brand: string,
+    sku: string,
+    tags: string[],
+    createdAt: Date,
+    updatedAt: Date 
   }

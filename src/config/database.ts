@@ -10,3 +10,5 @@ export const databaseConnect  = ()=>{
     .then(() => console.log("✅ Conectado a MongoDB", MONGO_URI))
     .catch((err) => console.error("❌ Error al conectar a MongoDB:", err));
 }
+
+export default mongoose;

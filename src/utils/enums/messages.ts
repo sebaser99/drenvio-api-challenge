@@ -13,5 +13,7 @@ export enum Messages {
     PASSWORD_MUST_BE_SAME = 'Las constraseñas debe ser iguales',
     CANNOT_BE_DELETED = 'no se puede eliminar por que ya se encuentra en uso',
     ALREADY_EXISTS = 'ya existe.',
+    PRODUCT_NOT_EXISTS = 'Error! El producto no existe.',
+    ALREADY_SPECIAL_PRICES = 'Ya tenías registrado este productos para recibir precios especiales.'
    
 };

@@ -5,4 +5,4 @@ import { productController } from '../dependencies';
 export const productsRoutes = express.Router();
 
 
-productsRoutes.get('/getAllProducts', productController.getAllUsers.bind(productController));
+productsRoutes.get('/', productController.getAllProducts.bind(productController));

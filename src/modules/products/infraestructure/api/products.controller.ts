@@ -5,7 +5,7 @@ export class ProductController  {
     constructor(
         private readonly _productManagement : ProductManagement
     ){}
-    async getAllUsers(req: Request, res: Response){
+    async getAllProducts(req: Request, res: Response){
         const {code, response} = await this._productManagement.getAllProducts();
         res.status(code).json(response);
     }

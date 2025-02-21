@@ -11,11 +11,11 @@ export class ProductManagement {
     ){}
     async getAllProducts():Promise<CodeAndResponse>{
         try {
-            const users = await this._repository.getAllProducts();
+            const products = await this._repository.getAllProducts();
             return {
                 code: ResponseStatus.SUCCESS,
                 response: {
-                    data: users
+                    data: products
                 }
             };
         } catch(err){

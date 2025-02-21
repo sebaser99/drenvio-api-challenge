@@ -2,6 +2,7 @@ import express, { Application } from "express";
 import { productsRoutes } from "../../../modules/products/infraestructure/api/products.routes";
 import { RouteGroup } from "../../domain/interfaces/route-group.interface";
 import cors from "cors";
+import { specialPricesRoutes } from "../../../modules/specialPrices/infraestructure/api/specialPrices.routes";
 
 export class AppRoutes {
     routeGroup: RouteGroup[] = [
@@ -9,7 +10,10 @@ export class AppRoutes {
         path: '/products',
         router: productsRoutes
       },
-      
+      {
+        path: '/specialPrices',
+        router: specialPricesRoutes
+      }
      
     ]
 

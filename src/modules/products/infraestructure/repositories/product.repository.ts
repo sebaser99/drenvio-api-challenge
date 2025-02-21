@@ -4,60 +4,27 @@ import { ProductModel } from "../models/product.model";
 
 export class ProductRepository implements ProductRepositoryInterface {
     async getAllProducts(): Promise<Product[]> {
-        const products = await ProductModel.find();
-        return products.map((product) => new Product(
-            product.id,
-            product.name,
-            product.price,
-            product.category,
-            product.stock,
-            product.description,
-            product.brand,
-            product.sku,
-            product.tags,
-            product.createdAt,
-            product.updatedAt
-          ));
+        const products = await ProductModel.find().lean();
+        return products;
     }
 
     async create(product: Product): Promise<Product> {
       const newProduct = await ProductModel.create(product);
-      return new Product(
-        newProduct.id,
-        newProduct.name,
-        newProduct.price,
-        newProduct.category,
-        newProduct.stock,
-        newProduct.description,
-        newProduct.brand,
-        newProduct.sku,
-        newProduct.tags,
-        newProduct.createdAt,
-        newProduct.updatedAt
-      );
+      return newProduct.toObject();
     }
   
     async findBySku(sku: string): Promise<Product | null> {
-      const product = await ProductModel.findOne({ sku });
-      return product
-        ? new Product(
-            product.id,
-            product.name,
-            product.price,
-            product.category,
-            product.stock,
-            product.description,
-            product.brand,
-            product.sku,
-            product.tags,
-            product.createdAt,
-            product.updatedAt
-          )
-        : null;
+      const product = await ProductModel.findOne({ sku }).lean();
+      return product;
+    }
+
+    async findById(id: string): Promise<Product | null> {
+      const product = await ProductModel.findById(id).lean();
+      return product;
     }
   
     async updateStock(sku: string, stock: number): Promise<void> {
-      await ProductModel.updateOne({ sku }, { stock });
+      await ProductModel.updateOne({ sku }, { stock }).lean();
     }
 
     async updateProduct(sku: string, product: Product): Promise<void> {
